@@ -1,0 +1,28 @@
+print ("loan calculator")
+print()
+#start
+
+loan = float(input("Enter the loan amount: "))
+time = int(input("Enter the time in years:"))
+rate = float(input("Enter the interest rate(%): "))
+#define variables as user input
+
+#set for loop 
+for i in range(time):
+  #calculate loan amount after interest
+  loan += loan * (rate/100)
+  # rate / 100 times loan = interest
+  # += adds interest to loan amount and updates loan amount
+  print("Year:",i + 1, "loan total is $",round(loan, 2))
+
+///Alternative///
+print("Loan Calculator\n")
+print("$1000 over 10 years at 5% interest\n")
+
+loan = 1000
+years = 10
+rate = 0.05
+
+for i in range(years):
+  loan = loan + (loan * rate)
+  print("Your loan amount for Year:", i+1, "is $", round(loan,2))
