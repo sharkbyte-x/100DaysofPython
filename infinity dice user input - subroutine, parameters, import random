@@ -1,0 +1,20 @@
+print("infinity dice")
+
+diceSides = int(input("How many sides do you want the dice to have?:"))
+
+def rollDice(diceSides):
+    while True:
+
+        import random
+        dice = random.randint(1, diceSides)
+        print("You rolled:" , dice)
+        again = input("Would you like to roll again? (Y/N)")
+        if again == "Y":
+            continue
+        elif again == "N":
+            exit()
+        else:
+            print("Sorry can you try again please.\n")
+            again = input("Would you like to roll again? (Y/N)")
+
+rollDice(diceSides)
