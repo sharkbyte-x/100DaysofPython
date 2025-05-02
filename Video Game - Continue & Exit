@@ -1,0 +1,15 @@
+while True:
+  print("You are in a dark room. You see a dim light under what you assume to be a door... What do you do?")
+  option1 = int(input("1. Go towards the door\n2. Stay where you are\n3. Look around the room\n4. Shout for help\n"))
+  if option1 == 1:
+    print("You open the door and walk out of the room. You are now in a hallway.")
+    break
+  elif option1 == 2:
+    print("You stay where you are and nothing happens.")
+    continue
+  elif option1 == 3:
+    print("You look around the room and see a few things. There is a table with a lamp on it, a chair, and a bed.")
+    continue
+  else:
+    print("You did not enter a valid option. The universe implodes.")
+  exit()
