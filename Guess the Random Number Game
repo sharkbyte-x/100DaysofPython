@@ -1,0 +1,25 @@
+import random
+
+print("Guess the number RANDOM VERSION 1 - 100!\n")
+print()
+x = random.randint(1,100)
+
+userGuess=int(input("What is your guess?:"))
+count=1
+
+while True:
+    if userGuess < x and userGuess > 0:
+        print("Your guess is too low")
+        count+=1
+        userGuess=int(input("What is your guess?:"))
+    elif userGuess > x:
+        print("Your guess is too high")
+        count+=1
+        userGuess=int(input("What is your guess?:"))
+    elif userGuess < 0:
+        print("No negative numbers please.")
+        exit()
+    elif userGuess == x:
+        print("You guessed it correctly!")
+        print("It took you", count, "tries to guess the number.")
+        exit()
