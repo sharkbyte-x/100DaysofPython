@@ -1,0 +1,11 @@
+def whichCake(ingredient, base, coating):
+    if ingredient == "chocolate":
+        print("Chocolate cake yum!")
+    elif ingredient == "vanilla":
+        print ("Vanilla cake is okay..")
+    else:
+        print("Yeah sure, so you want a", ingredient, "cake on a", base, "base with" , coating, "on top?")
+userIng = input("Enter an ingredient:")
+userBase = input("Enter a cake base:")
+userCoating = input("Enter a cake coating:")
+whichCake(userIng, userBase, userCoating)
