@@ -1,0 +1,31 @@
+print("Test Grade Calculator")
+
+testName = input("Enter the name of the test: ")
+
+maxScore = float(input("Enter the highest you can score on the test: "))
+
+userScore = float(input("Enter your score: "))
+
+percentage = (userScore / maxScore) * 100
+finalPercent = round(percentage, 2)
+
+if finalPercent >= 90:
+    grade = "A+"
+    print ("You got a", grade, finalPercent , "% on the", testName, "test.")
+elif finalPercent >= 80 and finalPercent < 90:
+    grade = "A-"
+    print ("You got a", grade, finalPercent , "% on the", testName, "test.")
+elif finalPercent >= 70 and finalPercent < 80:
+    grade = "B"
+    print ("You got a", grade, finalPercent , "% on the", testName, "test.")
+elif finalPercent >= 60 and finalPercent < 70:
+    grade = "C"
+    print ("You got a", grade, finalPercent , "% on the", testName, "test.")
+elif finalPercent >= 50 and finalPercent < 60:
+    grade = "D"
+    print ("You got a", grade, finalPercent , "% on the", testName, "test.")
+elif finalPercent < 50:
+    grade = "F"
+    print ("You got a", grade, finalPercent , "& on the", testName, "test.")
+else:
+  print("error")
