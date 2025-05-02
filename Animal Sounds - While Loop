@@ -1,0 +1,16 @@
+print("Animal Sounds")
+exit = ""
+while exit != "no":
+  animal = input("What animal do you want to hear?")
+  if animal == "cat":
+    print("The cat goes meow")
+    exit = input("Do you want to hear another animal?")
+  elif animal == "dog":
+    print("The dog goes woof")
+    exit = input("Do you want to hear another animal?")
+  elif animal == "duck":
+    print("The duck goes quack")
+    exit = input("Do you want to hear another animal?")
+  else:
+    print("I don't know that animal")
+    exit = input("Do you want to hear another animal?")
