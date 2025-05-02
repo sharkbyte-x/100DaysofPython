@@ -1,0 +1,19 @@
+from getpass import getpass as input
+#hides the input from the other player
+print("ROCK, PAPER, SCISSORS")
+player1 = input("Player 1, Choose R, P, or S: ")
+player2 = input("Player 2, Choose R, P, or S: ")
+if player1 == "R" and player2 == "S":
+  print("Player 1's", player1, "beats Player 2's", player2, "Player 1 wins!")
+elif player1 == "P" and player2 == "R":
+  print("Player 1's", player1, "beats Player 2's", player2, "Player 1 wins!")
+elif player1 == "S" and player2 == "P":
+  print("Player 1's", player1, "beats Player 2's", player2, "Player 1 wins!")
+elif player2 == "R" and player1 == "S":
+  print("Player 2's", player2, "beats Player 1's", player1, "Player 2 wins!")
+elif player2 == "P" and player1 == "R":
+  print("Player 2's", player2, "beats Player 1's", player1, "Player 2 wins!")
+elif player2 == "S" and player1 == "P":
+  print("Player 2's", player2, "beats Player 1's", player1, "Player 2 wins!")
+else:
+  print("It's a tie!")
