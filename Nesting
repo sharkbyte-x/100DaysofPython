@@ -1,0 +1,17 @@
+print("😱 Fake Fan Finder 😱")
+print("----------------------")
+anime = input("What is your favorite anime? ")
+if anime == "One Piece":
+    print("Really?")
+    favChar = input("Who is your favorite character? ")
+    if favChar == "Luffy":
+      print ("You're such a casual... Okay another question:")
+      favOpening = input("What is your favorite opening? ")
+      if favOpening == "Blue Bird":
+        print("SEE I KNEW IT! YOUR'E FAKE AF!")
+    elif favChar == "Zoro":
+      print("Bro you are so BASED 😎")
+    else:
+      print("Okay, at least it's not Luffy")
+else:
+  print("No one else watches that anime...")
