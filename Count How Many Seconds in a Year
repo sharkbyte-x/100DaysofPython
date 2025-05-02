@@ -1,0 +1,15 @@
+sec = 60
+secPerMinute= sec * 1
+secPerHour = secPerMinute * 60
+secPerDay = secPerHour * 24
+
+leapYear = secPerDay * 366
+year = secPerDay * 365
+
+
+print("How many seconds in a year?")
+question = input("Is it a leap year? (yes/no): ")
+if question == "yes":
+  print("There are," , leapYear , "seconds in a leap year.")
+else:
+  print("There are," , year , "seconds in a year.")
