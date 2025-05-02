@@ -1,0 +1,8 @@
+print("Hello! Welcome to the Number List Generator")
+print()
+x = int(input("Start at:"))
+y = int(input("End Before:"))
+z = int(input("Increment Value is:"))
+
+for i in range(x, y, z):
+    print(i)
