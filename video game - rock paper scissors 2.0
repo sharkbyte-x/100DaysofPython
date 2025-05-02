@@ -1,0 +1,51 @@
+from getpass import getpass as input
+
+#hides the input from the other player
+print("ROCK, PAPER, SCISSORS BEST OF 3!")
+
+roundNum = 1
+player1Score = 0
+player2Score = 0
+player1User = 1
+player2User = 2
+
+#rounds start here
+while roundNum <= 3:
+  print("Round", roundNum,)
+  player1 = input("Player 1, Choose R, P, or S > ")
+  player2 = input("Player 2, Choose R, P, or S > ")
+  if player1 == "R" and player2 == "S":
+    player1Score += 1
+    roundNum += 1
+    continue
+  elif player1 == "P" and player2 == "R":
+    player1Score += 1
+    roundNum += 1
+    continue
+  elif player1 == "S" and player2 == "P":
+    player1Score += 1
+    roundNum += 1
+    continue
+  elif player2 == "R" and player1 == "S":
+    player2Score += 1
+    roundNum += 1
+    continue
+  elif player2 == "P" and player1 == "R":
+    player2Score += 1
+    roundNum += 1
+    continue
+  elif player2 == "S" and player1 == "P":
+    player2Score += 1
+    roundNum += 1
+    continue
+  else:
+    print("It's a tie! Let's try again.")
+    continue
+else:
+  print("The game has ended!")
+    #end of rounds, now time for calculating the winner
+if player1Score > player2Score:
+  print("Player 1 won by a total score of", player1Score)
+elif player2Score > player1Score:
+  print ("Player 2 won by a total of:" , player2Score, "points.")
+exit()
