@@ -1,0 +1,22 @@
+print("Guess the number I chose between 1 and 1000000\n")
+print()
+correctInt = 250000
+userGuess=int(input("What is your guess?:"))
+count=1
+
+while True:
+  if userGuess < correctInt and userGuess > 0:
+    print("Your guess is too low")
+    count+=1
+    userGuess=int(input("What is your guess?:"))
+  elif userGuess > correctInt:
+    print("Your guess is too high")
+    count+=1
+    userGuess=int(input("What is your guess?:"))
+  elif userGuess < 0:
+    print("No negative numbers I am going to explode now.")
+    exit()
+  elif userGuess == correctInt:
+    print("You guessed it correctly!")
+    print("It took you", count, "tries to guess the number.")
+    break
