@@ -1,0 +1,23 @@
+print("USER LOGIN SYSTEM\n")
+
+#define attempt as following code
+def attempt():
+    userName = "david"
+    pwd = "password"
+    userAttemptName = input("Enter Username:")
+    userAttemptPwd = input("Enter Password:")
+    #took me a while but entire code including correct credentials goes under the definition
+
+    #determines outcomes
+    #only works when all variables are within the same code (can't have them outside the def)
+    if userAttemptName == userName and userAttemptPwd == pwd:
+        print("Welcome", userName)
+        exit()
+        #breaks the loop once input and credentials match
+    else:
+        print("Incorrect. Try Again.")
+    #   code I had but didn't need to use: elif userAttemptName != userName or userAttemptPwd != pwd:
+
+#sets the infinite loop of executing code above until credentials met and told to exit
+while True:
+    attempt()
