@@ -1,0 +1,12 @@
+print("WELCOME TO YOUR COMPUTER")
+print("+++++++++++++++++++++++")
+userName = input("Enter User Name:")
+userPWD = input("Enter Password:")
+if userName == "Kenny123" and userPWD == "12345":
+    print("Welcome", userName)
+elif userName == "VaneBB0910" and userPWD == "ilyKenny123":
+    print("Welcome", userName)
+elif userName == "Guest" and userPWD == "Password":
+    print("Welcome to your computer", userName)
+else:
+  print("Wrong Password or Username. Good Bye.")
