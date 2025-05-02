@@ -1,0 +1,17 @@
+print ("Hello! Welcome to the Times Tables Game!")
+print()
+
+num = int(input("Name your Multiple:"))
+count = 0
+for i in range(1, 11):
+#always 1 less than the second number
+    print(i , "x", num ,"=") #asks user for guess
+    answer = i * num #actual answer
+    guess = int(input("")) #users input for guess
+    if guess == answer: #if guess is correct counts 1 pt and print good job
+        count += 1
+        print ("Good Job!")
+    elif guess != answer: #if answer not correct, told nope and displays correct answer
+        print ("Nope! The answer was:", answer)
+print ("You scored",count, "out of 10.")
+#is printed outside of for loop once the count stops
