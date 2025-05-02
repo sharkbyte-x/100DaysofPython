@@ -1,0 +1,16 @@
+print("Wholesome Positivity Generator")
+print ()
+print("Welcome")
+userName = input("What is your name? ")
+print("Hello", userName,)
+userScale = input("On a scale of 1-10, how are you feeling today? ")
+if userScale == "9" or userScale == "10":
+    print("You are an amazing person, I love you", userName, ".")
+elif userScale == "7" or userScale == "8":
+    print("That's right! You're doing great things, keep it up",     userName, "!")
+elif userScale == "4" or userScale == "5" or userScale == "6":
+    print("That's not too bad", userName, "I hope you're able to     appreciate the small things in life. Things will get             better!")
+elif userScale == "1" or userScale == "2" or userScale == "3":
+    print("I'm sorry things aren't going your way. Keep your         head up and remember that you are loved and appreciated.")
+else:
+  print("I'm sorry, that is not a valid response.")
