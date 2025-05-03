@@ -1,0 +1,24 @@
+print(“Character Generator”)
+#this code will let you create a party with random health pools to begin your rpg adventure
+
+#characterHealth Subroutine rolls dice1 and dice2, multiplies them together, and returns the result as the randome health pool
+def characterHealth(dice1, dice2):
+	import random
+	dice1 = random.randint(1, dice1)
+	dice2 = random.randint(1, dice2)
+	health = dice1 * dice2
+	return health
+#parameters are entered below
+
+#start Subroutine will ask user for party size, and will repeat the Character Name Input and random HP equal times to the party size
+def start():
+	size = int(input(“What is the size of your party?”))
+	for i in range(size):
+	characterName = input(“Name of your warrior:”)
+	health = characterHealth(6,8)
+# Here the 1st Subroutine characterHealth is called with 6 and 8 being the size of the two dice and returns the health (dice1 * dice2)
+# And adds health value into new health variable so it can be called in the following line below.
+	print “HP:”, health)
+start()
+
+#variables can be confusing so I should make each variable unique next time
