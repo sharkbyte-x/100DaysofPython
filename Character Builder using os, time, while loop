@@ -1,0 +1,59 @@
+print("Character Builder")
+import os, time
+#imports libraries for all code below
+
+while True:
+    def character():
+        chname = input("Enter Character Name:")
+        return chname
+#returns input from user
+        time.sleep(1)
+    def Type():
+        chtype = input("Enter Character Type(Human, Elf, Wizard, Orc):")
+        time.sleep(1)
+        return chtype
+#returns input from user
+    def health():
+        import random
+#imports random library
+        roll1 = random.randint(1,6)
+#picks number between 1 - 6 at random; must always have range
+        roll2 = random.randint(1,12)
+#same as above with range 1 - 12
+        hp = ((roll1 * roll2)/2)+10
+#calculates HP of character as int
+        return hp
+#returns number result
+    def strength():
+        import random
+        roll3 = random.randint(1,6)
+        roll4 = random.randint(1,8)
+        strgth = ((roll3 * roll4)/2) + 12
+        return strgth
+#same as above
+
+    chname = character()
+    #calls function and assigns returned value into new variable known as chname
+
+    chtype = Type()
+    #calls function and assigns returned value into new variable known as chtype
+
+    hp = health()
+    #same as above but for hp
+
+    strgth = strength()
+    #same as above but for strgth
+
+    print(chname)
+    print(chtype)
+    print("HEALTH:", hp)
+    print("STRENGTH:", strgth)
+    again = input("Again?(Yes/No)")
+    if again == "No":
+        exit()
+    elif again == "Yes":
+        os.system("clear")
+        continue
+    else:
+        print("Sorry, try again.")
+        again = input("Again?(Yes/No")
