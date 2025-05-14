@@ -1,5 +1,6 @@
 print("Character Builder")
 import os, time
+#could've imported random library here as well and dele the imports from the functions below
 #imports libraries for all code below
 
 while True:
