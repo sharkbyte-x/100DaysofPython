@@ -1,0 +1,107 @@
+print("Battle Simulator 2P")
+import os, time, random
+rounds = 1
+
+def dice(side):
+    result = random.randint(1,side)
+    return result
+def healthP1():
+    hp1 = ((dice(6) * dice(12))/2)+10
+    return hp1
+def strengthP1():
+    strgth1 = ((dice(6) * dice(8))/2)+10
+    return strgth1
+def healthP2():
+    hp2 = ((dice(6) * dice(12))/2)+10
+    return hp2
+def strengthP2():
+    strgth2 = ((dice(6) * dice(8))/2)+10
+    return strgth2
+
+name1 = input("Enter Warrior #1 Name:")
+print()
+type1 = input("Enter Warrior #1 Character Type:(Human, Elf, Wizard, Orc):")
+
+print()
+print(name1)
+print(type1)
+hp1 = healthP1()
+print("Health:", hp1)
+strgth1 = strengthP1()
+print("Strength:", strgth1)
+print()
+
+name2 = input("Enter Warrior #2 Name:")
+print()
+type2 = input("Enter Warrior #2 Character Type:(Human, Elf, Wizard, Orc):")
+
+print()
+print(name2)
+print(type2)
+hp2 = healthP2()
+print("Health:", hp2)
+strgth2 = strengthP2()
+print("Strength:", strgth2)
+print()
+
+time.sleep(2)
+os.system("clear")
+
+while True:
+    print("Battle! Round", rounds)
+    p1 = dice(6)
+    p2 = dice(6)
+    dmg = abs((strengthP1() - strengthP2())) + 1
+    if p1 > p2:
+        hp2 -= dmg
+        print(name2, "takes a hit of", dmg, "damage")
+        print()
+        time.sleep(2)
+        print(name1,"Health:", hp1)
+        print()
+        print(name2,"Health:", hp2)
+        print()
+        if hp2 <= 0:
+            print(name1 , "is the winner!")
+            exit()
+        else:
+            rounds += 1
+            time.sleep(2)
+            os.system("clear")
+            continue
+    elif p2 > p1:
+        hp1 -= dmg
+        print(name1, "takes a hit of", dmg, "damage")
+        print()
+        time.sleep(2)
+        print(name1)
+        print("Health:", hp1)
+        print()
+        print(name2)
+        print("Health:", hp2)
+        print()
+        if hp1 <= 0:
+            print(name2, "is the winner!")
+            exit()
+        else: 
+            rounds += 1
+            time.sleep(2)
+            os.system("clear")
+            continue
+    else:
+        print("It's a draw!")
+        rounds += 1
+        time.sleep(2)
+        os.system("clear")
+        continue
+        
+
+
+
+
+
+
+
+
+
+
