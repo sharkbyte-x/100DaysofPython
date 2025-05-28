@@ -1,0 +1,46 @@
+print("Power of the F String")
+
+#sets values of variables
+#name = "James"
+#age = "21"
+#pronouns = "He/Him"
+
+
+print()
+#fstring with blank brackets and order of which variables are to appear
+#print("{} is {} years old and his pronouns are {}.".format(name, age, pronouns))
+#print()
+#frstring definding brackets with variables and format assigning variable to itself so 
+# one can input variables without needing the correct order
+#print("His name is {name}, he is {age} years old and his pronouns are {pronouns}.".format(name = name, age = age, pronouns = pronouns))
+#print()
+
+#fstring allows you to assign a string to a variable and print the variable
+#without need to cast or follow a correct order of operations
+#response = "His name is {name}, he is {age} years old and his pronouns are {pronouns}.".format(name = name, age = age, pronouns = pronouns)
+#print(response)
+#print()
+
+#fstring, puts f in front of string and input defined variables in to have same results
+#as previous format// Can change values of variables 
+#text = f"{name} is {age} years old, and his pronouns are {pronouns}!!!!"
+#print(text)
+#print()
+
+#{i: <3} = move printed variable left 3 character spaces
+#for i in range(1,31):
+#    print(f"Day {i:<3} of 100")
+#print()
+
+#challenge
+i = 1
+import os, time
+print("Course Feedback Loop - What did you think?\n")
+time.sleep(1)
+for i in range(1, 4):
+    reply = input(f"Day {i}:\n")
+    print()
+    output = (f"You thought Day {i} was '{reply}'\n")
+    print (f"{output:^50}")
+    time.sleep(1.5)
+   # os.system('cls')
