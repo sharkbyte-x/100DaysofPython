@@ -1,0 +1,32 @@
+#Start
+
+print("Hello", "\033[0;36m", "World", "\033[0m", "my name is", "\33[0;32m", "ULTRON", "\033[0m", "prepare to", "\033[0;31m", "DIE", "\033[0m", sep =" ")
+#printing with color and sep
+#--
+
+#create subroutine where if/else statements determine colors based on which 
+# text is used when calling the function
+def colorPrint(color, text):
+    if color == "Black":
+        print('\033[30m', text, sep=" ", end="")
+    elif color == "Red":
+        print("\033[31m", text, sep=" ", end="")
+    elif color == "Green":
+        print("\033[32m", text, sep=" ", end="")
+    elif color == "Yellow":
+        print("\033[33m", text, sep=" ", end="")
+    elif color == "Blue":
+        print("\033[34m", text, sep=" ", end="")
+    elif color == "Magenta":
+        print("\033[35m", text, sep=" ", end="")
+    elif color == "Cyan":
+        print("\033[36m", text, sep=" ", end="")
+    else:
+        print("\033[0m", text, sep=" ", end="")
+
+#calling the subroutine with color and text
+colorPrint("else","Hello World my name is")
+colorPrint("Red", "ULTRON")
+colorPrint("else","Prepare to")
+colorPrint("Magenta", "DIE!")
+print("\033[0m")
