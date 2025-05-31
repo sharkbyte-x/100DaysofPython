@@ -1,0 +1,25 @@
+#list = [1, 2, 4, 0, 5]
+#for x in (list):
+    #print(list[0])
+    #print(list[i])
+    #can't use i needs to be a new variable
+    #list [2] = "hello world"
+    #assigning new value
+    #print (list[2])
+    #print(x)
+    #prints each value in list in order from 0,1,2,...
+
+#print(f"The last value of the list is {list[4]}")
+
+##CHALLENGE##
+import random
+#import library
+
+gmLang = ["Good Morning", "Buenos Dias", "Najtsi Erandeski", "Cualli Tonalli" ]
+#create list and assign values
+
+index = random.choice(gmLang)
+#chooses random index and assigns value from index to variable
+
+print(index)
+#prints value chosen randomly above
