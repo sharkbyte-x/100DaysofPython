@@ -1,0 +1,65 @@
+#Dynamic List Exercises
+
+#myAgenda = []
+
+#def printList():
+    #print()
+    #for item in myAgenda:
+        #print(item)
+    #print()
+
+
+#while True:
+    #item = input("What's next on your agenda?")
+    #myAgenda.append(item)
+    #will add user input assigned to variable item to the list beginning with index 0
+    #printList()
+
+#while True:
+    #menu =  input("Add or Remove?")
+    #if menu == "add":
+        #item = input("What's next on your agenda?")
+        #myAgenda.append(item)
+    #elif menu == "remove":
+        #printList()
+        #item = input("What do you want to remove?")        
+        #if item in myAgenda:
+            #myAgenda.remove(item)
+    #will remove item from list if item is in list
+        #else:
+            #print(f"{item} not in list.")
+            #will print out no item in list and repeat while loop
+    #printList()
+
+#/////////////////////////////////////////////////////////////////////#
+### CHALLENGE ###
+
+menu = "To-Do List Manager\n"
+print(f"{menu:^50}")
+toDoList = []
+
+def viewItems():
+    print()
+    for item in toDoList:
+        print(item)
+    print()
+    
+
+while True:
+    choice = input("Do you want to view, add, or edit the to-do list?")
+    if choice == "view":
+        viewItems()
+    elif choice == "add":
+        item = input("What would you like to add to your to-do list?:")
+        toDoList.append(item)
+        viewItems()
+    elif choice == "edit":
+        viewItems()
+        removeItem = input("What would you like to remove from your to-do list?:")
+        if removeItem in toDoList:
+            toDoList.remove(removeItem)
+            viewItems()
+        else:
+            print(f"{removeItem} is not on your to-do list.")
+    else:
+        continue
