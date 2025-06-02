@@ -1,0 +1,32 @@
+###How to access lists###
+import os, time
+emailList = []
+counter = 1
+
+def viewList():
+    print()
+    print(f"{emailList}")
+    print()
+
+while True:
+    menu = input(" 1. Add Email\n 2. Remove Email\n 3. View Emails\n 4. Spam Emails\n")
+    if menu == "1":
+        add = input("Add email here:")
+        emailList.append(add)
+    elif menu == "2":
+        viewList()
+        remove = input("Remove email from list:")
+        emailList.remove(remove)
+    elif menu == "3":
+
+        # ACCESS LIST USING THIS METHOD VVV #
+        for index in range(len(emailList)):
+            print(f"{index}:{emailList[index]}")
+    #spamming emails
+    elif menu == "4":
+        os.system("cls")
+        for index in range(len(emailList)):
+            print(f"Email {counter}\n\nDear {emailList[index]}\n You are being spammed.")
+            time.sleep(3)
+            os.system("cls")
+            counter += 1
