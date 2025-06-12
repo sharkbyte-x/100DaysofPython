@@ -1,0 +1,93 @@
+#DAY 35 CHALLENGE#
+
+import os, time
+toDoList = []
+
+def viewList():
+    print()
+    #len returns number of items within an object// len == Length
+    for index in range(len(toDoList)):
+        print(f"{toDoList[index]}")
+    print()
+
+while True:
+    print()
+    print("ToDo List Manager\n")
+    menu = input(" Do you want to\n 1. View\n 2. Add\n 3. Remove\n 4. Edit\n 5. Delete\nyour todo list?: ")
+    if menu == "1":
+        time.sleep(1)
+        os.system("cls")
+        viewList()
+        time.sleep(3)
+        os.system("cls")
+        continue
+    elif menu == "2":
+        time.sleep(1)
+        os.system("cls")
+        add = input("What would you like to add to your todo list?:")
+        ####
+        #after a couple of days of not looking up the answer I found this solution
+        #to checking for items in a list I wish I had found sooner
+        #so I used it below for the add function in the menu
+        #but I kept my original solution for the other menu options below that used a for loop
+        #to check if input was in the list
+        ####
+        if add in toDoList:
+            print("Item is already in your todo list. Please try again.")
+            time.sleep(2)
+            os.system("cls")
+        else:
+            toDoList.append(add)
+            viewList()
+            time.sleep(1)
+            os.system("cls")
+    elif menu == "3":
+        time.sleep(1)
+        os.system("cls")
+        viewList()
+        remove = input("What would you like to remove from your todo list?:")
+        for index in range(len(toDoList)):
+            if remove in toDoList:
+                check = input("Are you sure you want to remove this item from your list?(Y/N)")
+                print(remove)
+                if check == "Y":
+                    #took sometime, I overthought it but solution was basically putting
+                    #the remove input as an index like below
+                    toDoList.remove(remove)
+                    time.sleep(1)
+                    os.system("cls")
+                else:
+                    print ("Returning to menu...")
+                    time.sleep(1)
+                    os.system("cls")
+                    continue
+            else:
+                continue
+    elif menu == "4":
+        time.sleep(1)
+        os.system("cls")
+        viewList()
+        edit = input("What would you like to edit from your todo list?")
+        #for every item in the list...
+        for index in range(len(toDoList)):
+            #checks if item is in the list
+            if edit == toDoList[index]:
+                newEdit = input("What would you like to edit it to?:")
+                #assigns edited input to previous input
+                toDoList[index] = newEdit
+                print(f"{newEdit} is now in your to-do list.")
+                viewList()
+                time.sleep(2)
+                os.system("cls")
+            #if edit is not in the list it will exit out to the menu automatically
+            #no need for else statement
+    elif menu == "5":
+        time.sleep(1)
+        os.system("cls")
+        for index in range(len(toDoList)):
+            #resets list to no values 
+            toDoList = []
+            viewList()
+        print("Your todo list has been deleted.")
+        time.sleep(3)
+        os.system("cls")
